@@ -8,7 +8,7 @@ open class LanguageManager {
     private enum Keys: String {
         case current
     }
-    
+    // Test
     static let sInstance = LanguageManager()
     private static let localization = "am.hovhannes.personal.language.manager"
     private let userDefaults = UserDefaults(suiteName: "am.hovhannes.personal.language.manager.userdefaults")
