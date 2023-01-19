@@ -70,7 +70,7 @@ open class LanguageManager {
     
     public static func localizedstring(_ key: String, comment: String = "") -> String {
         if
-            let languageDic = BundleEx.replacedTranslations[BundleEx.currentLangauge.rawValue],
+            let languageDic = BundleEx.replacedTranslations[LanguageManager.current() ?? "hy"],
             let val = languageDic[key] {
             return val
         }
@@ -116,7 +116,7 @@ private class BundleEx: Bundle {
     
     override func localizedString(forKey key: String, value: String?, table tableName: String?) -> String {
         if
-            let languageDic = BundleEx.replacedTranslations[BundleEx.currentLangauge.rawValue],
+            let languageDic = BundleEx.replacedTranslations[LanguageManager.current() ?? "hy"],
             let val = languageDic[key] {
             return val
         }
