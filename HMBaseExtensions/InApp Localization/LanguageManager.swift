@@ -93,7 +93,7 @@ open class LanguageManager {
         return identifiers
     }
     
-    func replaceTranslations(pairs: [String: String], for language: String) {
+    public static func replaceTranslations(pairs: [String: String], for language: String) {
         Bundle.replaceTranslations(pairs: pairs, for: language)
     }
 }
