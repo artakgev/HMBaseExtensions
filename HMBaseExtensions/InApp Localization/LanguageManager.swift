@@ -24,11 +24,12 @@ open class LanguageManager {
     private let userDefaults = UserDefaults(suiteName: "am.hovhannes.personal.language.manager.userdefaults")
     private lazy var supportedLanguages = Bundle.main.localizations
     
-    private init() {
+     init() {
         if userDefaults?.string(forKey: Keys.current.rawValue) == nil {
             userDefaults?.set(Bundle.main.preferredLocalizations.first, forKey: Keys.current.rawValue)
         }
     }
+    
     
     public var languageChange: PublishRelay<String?> = PublishRelay()
     public var currentLocalized: String? {
