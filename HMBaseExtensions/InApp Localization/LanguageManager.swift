@@ -38,7 +38,7 @@ open class LanguageManager {
         return locale.displayName(forKey: NSLocale.Key.identifier, value: identifier)
     }
     
-    public static func sInstance() -> LanguageManager? {
+    public static func shared() -> LanguageManager? {
         return sInstance
     }
     
