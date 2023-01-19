@@ -39,7 +39,7 @@ open class LanguageManager {
     }
     
     public static func replaceTranslations(pairs: [String: String], for language: String) {
-        return sInstance.replace(pairs: pairs, for: language)
+        sInstance.replace(pairs: pairs, for: language)
     }
     
     public static func current() -> String? {
