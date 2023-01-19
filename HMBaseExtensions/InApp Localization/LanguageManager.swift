@@ -69,6 +69,12 @@ open class LanguageManager {
     }
     
     public static func localizedstring(_ key: String, comment: String = "") -> String {
+        if
+            let languageDic = BundleEx.replacedTranslations[BundleEx.currentLangauge.rawValue],
+            let val = languageDic[key] {
+            return val
+        }
+        
         let bundle = Bundle.main
         guard let countryCode = current(),
             let path = bundle.path(forResource: countryCode, ofType: "lproj"),
