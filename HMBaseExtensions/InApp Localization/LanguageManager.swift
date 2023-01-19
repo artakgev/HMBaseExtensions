@@ -38,6 +38,10 @@ open class LanguageManager {
         return locale.displayName(forKey: NSLocale.Key.identifier, value: identifier)
     }
     
+    public static func sInstance() -> LanguageManager? {
+        return sInstance
+    }
+    
     public static func current() -> String? {
         return sInstance.userDefaults?.string(forKey: Keys.current.rawValue)
     }
