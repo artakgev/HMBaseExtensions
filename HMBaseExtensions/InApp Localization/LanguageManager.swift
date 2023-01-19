@@ -38,8 +38,8 @@ open class LanguageManager {
         return locale.displayName(forKey: NSLocale.Key.identifier, value: identifier)
     }
     
-    public static func shared() -> LanguageManager? {
-        return sInstance
+    public static func replaceTranslations(pairs: [String: String], for language: String) {
+        return sInstance.replace(pairs: pairs, for: language)
     }
     
     public static func current() -> String? {
@@ -93,7 +93,7 @@ open class LanguageManager {
         return identifiers
     }
     
-    public static func replaceTranslations(pairs: [String: String], for language: String) {
+     func replace(pairs: [String: String], for language: String) {
         Bundle.replaceTranslations(pairs: pairs, for: language)
     }
 }
