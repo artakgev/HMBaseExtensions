@@ -16,8 +16,11 @@ public  struct BiometricUtils {
                 return .faceID
             case .touchID:
                 return .touchID
-            case .none:
+            case .none: 
                 return .none
+            case .opticID: 
+                return .none
+                
             }
         } else {
             #if TARGET_OS_SIMULATOR
